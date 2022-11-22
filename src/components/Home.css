@@ -1,0 +1,519 @@
+/* color variables */
+
+:root {
+    --moduleFull: rgb(64, 53, 165);
+    --darkGray: rgb(33, 33, 33);
+    --lightGray: rgb(57, 57, 57);
+    --brownBG: #4b2906;
+}
+
+form, input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+/* pre defined basics */
+h1 {
+    color: aliceblue;
+    text-transform: uppercase;
+    font-size: 2em;
+}
+
+h2 {
+    color: aliceblue;
+    text-transform: uppercase;
+    font-size: 1.5em;
+}
+
+h3 {
+    color: aliceblue;
+    text-transform: uppercase;
+    font-size: 1em;
+}
+
+h4 {
+    color: aliceblue;
+    font-size: .5em;
+    text-transform: uppercase;
+}
+
+h5,
+h6,
+
+p {
+    font-size: 1em;
+    color: rgb(146, 146, 146);
+}
+
+.fontBlack {
+    color: black !important;
+}
+
+/* quick styles */
+.text-white {
+    color: rgba(255, 255, 255, 0.911);
+}
+
+.text-centered {
+    text-align: center;
+}
+
+/* Custom styles */
+.page-header {
+    width: inherit;
+    margin: 0;
+    border: none;
+    padding: 0;
+    height: inherit;
+    background-color: var(--darkGray);
+    /*opacity: 50%;*/
+    /*
+  background-image: url(../localAssets/YoutubeBanner.png);
+  background-position: center;
+  background-repeat: repeat;
+  background-size: 12em;
+  */
+}
+
+.page-header-img {
+    display: flex;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    opacity: 70%;
+    border: 0 !important;
+    padding: 0 !important;
+}
+
+.body-splitter {
+    width: 100%;
+    height: 20vh;
+}
+
+.body-splitter-lg {
+    height: 40vh;
+}
+
+.body-splitter-sm {
+    width: 100%;
+    height: 15vh;
+}
+
+.body-splitter-xs {
+    width: 100%;
+    height: 10vh;
+}
+
+.page-header-separator {
+    width: 100%;
+    height: 4em;
+}
+
+.home-page-header {
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    /*opacity: 50%;*/
+
+    /*
+    background-image: url(../localAssets/YoutubeBanner.png);
+    background-position: center;
+    background-repeat: repeat;
+    background-size: 12em;
+    */
+}
+
+.home-page-header-vid {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    opacity: 80%;
+}
+
+.home-page-header-vid-text {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 100%;
+    height: inherit;
+    background: #00000073;
+    margin-top: -22%;
+    max-width: 100%;
+    height: 10em;
+    min-height: 1em;
+    max-height: 5.5em;
+    align-content: center;
+    text-align: center;
+    font-size: x-large;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+}
+
+.page-holder-modules {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-self: center;
+    margin: auto;
+    width: 90vw;
+    padding: 0;
+    height: auto;
+}
+
+.page-holder-full {
+    height: auto;
+    background-color: var(--darkGray);
+    padding-left: 0;
+    padding-right: 0;
+    overflow: visible;
+    position: relative;
+    margin: 0;
+    box-shadow: 0em 0em 1em 1.5em rgba(0, 0, 0, 0.598);
+}
+
+.full-1 {
+    border-radius: .5em;
+    background-color: var(--moduleFull);
+    box-shadow: 0em 0em 4em -1em rgb(54, 54, 54);
+    height: auto;
+    padding-left: .5em;
+    padding-right: .5em;
+    padding-top: 10em;
+    padding-bottom: 10em;
+    margin: 0;
+    width: auto;
+}
+
+.full-2 {
+    height: auto;
+    width: auto;
+    padding-left: .5em;
+    padding-right: .5em;
+    padding-top: 10em;
+    padding-bottom: 10em;
+    margin: 0;
+}
+
+.welcome-body {
+    background-color: var(--lightGray);
+    position: relative;
+    top: -45px;
+    height: 30vh;
+    box-shadow: 0em 1em 1em 0.5em rgba(0, 0, 0, 0.651);
+    padding: 0;
+    border-radius: 1em;
+
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-self: center;
+    /*
+    Adds its own scroll bar:
+        overflow: auto;
+    */
+
+}
+
+.welcome-body:hover {
+    background-color: rgb(75, 75, 75);
+}
+
+.welcome-text {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-self: center;
+    text-align: center;
+    padding: 1em;
+    padding-left: 3em;
+    padding-right: 3em;
+    height: inherit;
+    justify-content: center;
+    justify-self: center;
+    margin: auto
+}
+
+.services-left {
+    border-style: dashed;
+    width: 60vw;
+    display: flex;
+    height: auto;
+    border-color: red;
+}
+
+.services-right {
+    border-style: dashed;
+    border-color: chartreuse;
+    width: 25vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.services-btn {
+    margin: 10px;
+
+}
+
+.services-btn:hover {
+    transform: scale(1.08);
+    transform-origin: 50vw;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in;
+    transition-delay: 0.3s;
+    background-color: aqua;
+    background: -webkit-linear-gradient(left, red, yellow, #00CB07, #07A9FF, #1044FF, #1B2F7F, #D92F7F);
+    background: -o-linear-gradient(left, red, yellow, #00CB07, #07A9FF, #1044FF, #1B2F7F, #D92F7F);
+    background: -moz-linear-gradient(left, red, yellow, #00CB07, #07A9FF, #1044FF, #1B2F7F, #D92F7F);
+    background: linear-gradient(to right, red, yellow, #00CB07, #07A9FF, #1044FF, #1B2F7F, #D92F7F);
+    box-shadow: 0em 0em .2em .2em rgb(0, 0, 0);
+    border: 0.1px;
+}
+
+.services-btn:focus {
+    transform: scale(1.08);
+    transform-origin: 50vw;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in;
+    transition-delay: 0.3s;
+    background-color: aqua;
+    background: -webkit-linear-gradient(left, red, yellow, #00CB07, #07A9FF, #1044FF, #1B2F7F, #D92F7F);
+    background: -o-linear-gradient(left, red, yellow, #00CB07, #07A9FF, #1044FF, #1B2F7F, #D92F7F);
+    background: -moz-linear-gradient(left, red, yellow, #00CB07, #07A9FF, #1044FF, #1B2F7F, #D92F7F);
+    background: linear-gradient(to right, red, yellow, #00CB07, #07A9FF, #1044FF, #1B2F7F, #D92F7F);
+    box-shadow: 0em 0em .2em .2em rgb(0, 0, 0);
+    border: 0.1px;
+}
+
+.services-infoHolder {
+    padding-top: 4em;
+    padding-left: 0;
+    padding-right: 0;
+    height: auto;
+}
+
+.page-footer {
+    background-color: rgba(17, 17, 17, 0.973);
+    text-align: center;
+    height: auto;
+    top: 150em;
+    padding: 2em;
+}
+
+.profile-pic {
+    width: 50%;
+    border-radius: 2em;
+}
+
+.btn-primary-flex {
+    text-align: center;
+    display: flex;
+    margin: auto;
+    padding: 1em;
+    border-radius: .5em;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    background-color: rgb(6, 155, 175);
+    font-size: 1.5em;
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+    box-shadow: 0em .5em 2em 1em rgba(0, 0, 0, 0.74);
+}
+
+.btn-primary {
+    background-image: none;
+    border: none;
+    border-radius: 0;
+    background-color: #2892d7;
+}
+
+.btn-secondary-flex {
+    margin: auto;
+    padding: 2em;
+    display: block;
+    text-align: center;
+}
+
+.btn-secondary {
+    height: 3em;
+    width: 8em;
+    border-radius: 1em;
+    background-color: #2892d7;
+}
+
+.centered-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.centered-text {
+    text-align: center;
+}
+
+.gridHolder {}
+
+.row-home {
+    justify-content: center;
+}
+
+.social-media-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-media-logo {
+    margin: 0.5em;
+    height: 3em;
+    width: 3em;
+    border-radius: 4em;
+}
+
+.contact-container {
+    background-color: rgb(37, 37, 37);
+    height: 4em;
+}
+
+.body-splitter-parallax {
+    z-index: -1000;
+    height: 500px;
+    width: 100%;
+}
+
+.btn-login {
+    position: relative;
+    width: 20vw;
+    height: 6vh;
+    top: -22vh;
+    z-index: 10;
+    margin: auto;
+    padding: 2em;
+    border-radius: .5em;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    background-color: rgba(6, 155, 175, 0.658);
+    font-size: 2em;
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+    box-shadow: 0em .5em 2em 1em rgba(0, 0, 0, 0.74);
+}
+
+.btn-login:hover {
+    width: 25vw;
+    background-color: rgb(6, 155, 175);
+    box-shadow: 0em 0em 2em 1em rgba(0, 0, 0, 0.74);
+}
+
+.btn-login:focus {
+    background-color: rgba(23, 189, 45, 0.774);
+    box-shadow: 0em 0em 2em 1em rgba(0, 0, 0, 0.74);
+}
+
+.btn-login2 {
+    position: relative;
+    width: 16vw;
+    height: 6vh;
+    top: -22vh;
+    z-index: 10;
+    margin: auto;
+    padding: 2em;
+    border-radius: .5em;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    background-color: rgba(6, 175, 28, 0.658);
+    font-size: 2em;
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+    box-shadow: 0em .5em 2em 1em rgba(0, 0, 0, 0.74);
+}
+
+.btn-modal {
+    position: inherit;
+    margin: auto;
+    width: 10em;
+    padding: .8em;
+    border-radius: .5em;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    background-color: rgba(6, 155, 175, 0.658);
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+}
+
+.carousel {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: center;
+    justify-self: center;
+    background-color: var(--cardBGlight);
+    height: 70vh;
+}
+
+.carousel-img {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: center;
+    justify-self: center;
+    height: 70vh;
+
+}
+
+.carousel-control-prev{
+    height: inherit;
+    width: 6vw;
+    background-color: #4b4b4b5a;
+}
+
+.carousel-control-next{
+    height: inherit;
+    width: 6vw;
+    background-color: #4b4b4b5a;
+}
+
+.carousel-control-prev:hover{
+    height: inherit;
+    width: 10vw;
+    background-color: #4b4b4b5a;
+}
+
+.carousel-control-next:hover{
+    height: inherit;
+    width: 10vw;
+    background-color: #4b4b4b5a;
+}
+
+.carousel-control-prev-icon {
+    height: 8rem !important;
+    width: 8rem !important;
+}
+
+.carousel-control-next-icon {
+    height: 8rem !important;
+    width: 8rem !important;
+}

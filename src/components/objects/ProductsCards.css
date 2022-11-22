@@ -1,0 +1,267 @@
+:root {
+    --cardBGlight: rgb(33, 30, 30);
+    --cardBG: rgb(39, 39, 39);
+    --cardBGdark: rgb(19, 19, 19);
+    --cardBlakcT: rgba(14, 14, 14, 0.582);
+    --cardBrown: rgb(96, 65, 34);
+}
+
+.PC-cardContainer {
+    /* width: 30vw; */
+    /* min-width: 40vw; */
+    background-color: rgba(112, 221, 136, 0.327);
+    /* background-color: var(--cardBG); */
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-bottom: 6vh;
+    padding: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-color: black;
+    z-index: 10;
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
+    border-top-right-radius: 30%;
+}
+
+.PC-cardContainer:hover {
+    border-style: double;
+    border-width: .2em;
+    transform: scale(1.1);
+    z-index: 100;
+    border-color: rgba(247, 247, 247, 0.878);
+    /* box-shadow: 0em 0em 5em 5em rgba(0, 0, 0, 0.699); */
+    /* box-shadow: 0em 0em 40em 30em rgba(0, 0, 0, 0.699); */
+    box-shadow: 0em 0em 2em 1em rgba(0, 0, 0, 0.699);
+    /* border-color: rgba(236, 63, 6, 0.968); */
+    border-style: double;
+    /* transform: rotate(2deg); */
+
+}
+
+.PC-cardContainerHead {
+    max-width: 80vw;
+    background-color: var(--cardBG);
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin: auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 0;
+    box-shadow: 0em 0em 3em 1.5em rgba(0, 0, 0, 0.699);
+    border-color: rgba(0, 0, 0, 0.396);
+    border-style: double;
+}
+
+.PC-cardContainerHead:hover {
+    transform: scale(1.01);
+
+}
+
+.PC-mediaContainer {
+    width: inherit;
+    min-height: 30vh;
+    max-height: 70vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-self: center;
+    background-color: var(--cardBlakcT);
+    border-top-right-radius: 30%;
+}
+
+
+.PC-mediaText {
+    background-color: rgba(0, 0, 0, 0.418);
+    position: absolute;
+    bottom: 0;
+    padding: .5em;
+    backdrop-filter: blur(4px);
+    color: rgb(207, 207, 207);
+    font-size: min(2em, 10vw);
+    width: 100%;
+}
+
+.PC-cardContent {}
+
+.PC-cardBody {
+    background-color: var(--cardBGlight);
+}
+
+
+
+.PC-text {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    margin: auto;
+}
+
+.PC-cardButtons{
+    /* background-color: var(--cardBlakcT); */
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+    padding: .5em;
+}
+
+.PC-cardTitle {
+    /* background-color: var(--cardBlakcT); */
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-self: left;
+    justify-content: left;
+    padding: .5em;
+}
+
+.PC-cardBtn {
+    /* background-color: rgba(68, 68, 68, 0.155); */
+    border: 0;
+    margin-left: 35%;
+    border: 0;
+}
+
+.PC-cardBtn:hover {
+    background-color: rgb(38, 226, 243);
+}
+
+.PC-cardBtn:active {
+    background-color: rgba(20, 165, 197, 0.155);
+    transform: scale(1.1);
+}
+
+.PC-text {
+    margin: auto;
+    vertical-align: middle;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    font-size: min(1.4em, 8vw);
+}
+
+.PC-textOverflow {
+    padding-top: .5em;
+    padding-bottom: .5em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    line-height: 1.5;
+    font-size: min(1em, 8vw);
+    text-align: justify;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    /* # of lines displayed */
+    -webkit-box-orient: vertical;
+}
+
+
+.PC-dropdown {
+    padding: 1em;
+    width: inherit;
+    height: inherit;
+    margin: auto;
+    display: flex;
+    justify-self: center;
+    justify-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.PC-img {
+    border-top-right-radius: 30%;
+    width: inherit;
+    max-width: auto;
+    display: block;
+    margin: auto;
+}
+
+.PC-btn {
+    display: flex;
+    margin: auto;
+    height: inherit;
+    background-color: rgb(90, 90, 90);
+    width: inherit;
+    justify-content: center;
+}
+
+.PC-btn:hover {
+    transform: scale(1.02);
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in;
+    transition-delay: 0.5s;
+    background-color: aqua;
+    background: -webkit-linear-gradient(top, #1B2F7F, #00aaff, #1B2F7F);
+    box-shadow: 0em 0em .2em .2em rgb(0, 0, 0);
+    border-radius: 10px;
+}
+
+
+.PC-btn-desc {
+    justify-content: center;
+    margin-top: 3em;
+    width: 10em;
+    height: 3em;
+    background-color: rgb(90, 90, 90);
+}
+
+.PC-btn-desc:hover {
+    transform: scale(1.02);
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in;
+    transition-delay: 0.5s;
+    background-color: aqua;
+    background: -webkit-linear-gradient(top, #1B2F7F, #00aaff, #1B2F7F);
+    box-shadow: 0em 0em .2em .2em rgb(0, 0, 0);
+    border-radius: 10px;
+}
+
+.PC-span {
+    color: antiquewhite;
+    display: flex;
+    margin: auto;
+    justify-self: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+.PC-span:hover {
+    background-color: rgba(221, 160, 28, 0.11);
+    padding: .5em;
+}
+
+.PC-sizeButtons {
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom-left-radius: 30%;
+    border-top-right-radius: 30%;
+    border: groove;
+    background-color: #00aaff00;
+}
+
+.PC-sizeButtons:hover {
+    background-color: rgba(170, 226, 151, 0.631);
+    border-color: white;
+    transform: scale(1.1);
+    /* color: black; */
+}

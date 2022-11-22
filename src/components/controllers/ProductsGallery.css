@@ -1,0 +1,32 @@
+.NG-row {
+    display: flex;
+    margin: auto;
+    flex-direction: row;
+    justify-self: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 3vw;
+}
+
+.NG-head {
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+    margin: auto;
+}
+
+.NG-column {
+    display: flex;
+    margin:auto;
+    flex-direction: column;
+    justify-content: left;
+    justify-self: left;
+    max-width: 2000px;
+    min-width: auto;
+    padding: 2vw;
+}
+
+.border {
+    border-style: dashed !important;
+    background-color: red  important;
+}

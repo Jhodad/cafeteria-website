@@ -1,0 +1,232 @@
+:root {
+    --cardBGlight: rgb(49, 49, 49);
+    --cardBG: rgb(39, 39, 39);
+    --cardBGdark: rgb(19, 19, 19);
+    --cardBlakcT: rgba(14, 14, 14, 0.582);
+}
+
+.NC-cardContainer {
+    /* width: 30vw; */
+    /* min-width: 40vw; */
+    background-color: var(--cardBG);
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-bottom: 6vh;
+    padding: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-style: double;
+    border-color: black;
+    z-index: 10;
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
+}
+
+.NC-cardContainer:hover {
+    transform: scale(120%);
+    background-color: rgb(0, 0, 0);
+    /* box-shadow: 0em 0em 5em 5em rgba(0, 0, 0, 0.699); */
+    /* box-shadow: 0em 0em 40em 30em rgba(0, 0, 0, 0.699); */
+    box-shadow: 0em 0em 2em 1em rgba(0, 0, 0, 0.699);
+    border-color: rgba(6, 194, 236, 0.396);
+    border-style: double;
+    /* transform: rotate(2deg); */
+    z-index: 100;
+}
+
+.NC-cardContainerHead {
+    max-width: 80vw;
+    background-color: var(--cardBG);
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin: auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 0;
+    box-shadow: 0em 0em 3em 1.5em rgba(0, 0, 0, 0.699);
+    border-color: rgba(0, 0, 0, 0.396);
+    border-style: double;
+}
+
+.NC-cardContainerHead:hover {
+    transform: scale(120%);
+    z-index: 100;
+}
+
+.NC-mediaContainer {
+    width: inherit;
+    min-height: 30vh;
+    max-height: 70vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-self: center;
+    background-color: var(--cardBlakcT);
+}
+
+.NC-mediaText {
+    background-color: rgba(0, 0, 0, 0.418);
+    position: absolute;
+    bottom: 0;
+    padding: .5em;
+    backdrop-filter: blur(4px);
+    color: rgb(207, 207, 207);
+    font-size: min(.8em, 10vw);
+    width: 100%;
+}
+
+.NC-cardContent {}
+
+.NC-cardBody {
+    background-color: var(--cardBGdark);
+}
+
+.NC-cardContent:hover {}
+
+.NC-text {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    margin: auto;
+}
+
+.NC-cardTitle {
+    /* background-color: var(--cardBlakcT); */
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    padding: .5em;
+
+}
+
+.NC-cardBtn {
+    /* background-color: rgba(68, 68, 68, 0.155); */
+    border: 0;
+    margin-left: 35%;
+    border: 0;
+}
+
+.NC-cardBtn:hover {
+    background-color: rgb(38, 226, 243);
+}
+
+.NC-cardBtn:active {
+    background-color: rgba(20, 165, 197, 0.155);
+    transform: scale(1.1);
+}
+
+.NC-text {
+    margin: auto;
+    vertical-align: middle;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    font-size: min(1.4em, 8vw);
+
+}
+
+.NC-textOverflow {
+    padding-top: .5em;
+    padding-bottom: .5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    line-height: 1.5;
+    font-size: min(1em, 8vw);
+    text-align: justify;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    /* # of lines displayed */
+    -webkit-box-orient: vertical;
+}
+
+.NC-textOverflow:hover {
+    color: #c4c4c4;
+    -webkit-transition: all 2s ease;
+    -moz-transition: all 2s ease;
+    -o-transition: all 2s ease;
+    transition: all 2s ease;
+}
+
+.NC-dropdown {
+    padding: 1em;
+    width: inherit;
+    height: inherit;
+    margin: auto;
+    display: flex;
+    justify-self: center;
+    justify-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.NC-btn {
+    display: flex;
+    margin: auto;
+    height: inherit;
+    background-color: rgb(90, 90, 90);
+    width: inherit;
+    justify-content: center;
+}
+
+.NC-btn:hover {
+    transform: scale(1.02);
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in;
+    transition-delay: 0.5s;
+    background-color: aqua;
+    background: -webkit-linear-gradient(top, #1B2F7F, #00aaff, #1B2F7F);
+    box-shadow: 0em 0em .2em .2em rgb(0, 0, 0);
+    border-radius: 10px;
+}
+
+
+.NC-btn-desc {
+    justify-content: center;
+    margin-top: 3em;
+    width: 10em;
+    height: 3em;
+    background-color: rgb(90, 90, 90);
+}
+
+.NC-btn-desc:hover {
+    transform: scale(1.02);
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in;
+    transition-delay: 0.5s;
+    background-color: aqua;
+    background: -webkit-linear-gradient(top, #1B2F7F, #00aaff, #1B2F7F);
+    box-shadow: 0em 0em .2em .2em rgb(0, 0, 0);
+    border-radius: 10px;
+}
+
+.NC-span {
+    color: antiquewhite;
+    display: flex;
+    margin: auto;
+    justify-self: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+.NC-span:hover {
+    background-color: rgba(221, 160, 28, 0.11);
+    padding: .5em;
+}
