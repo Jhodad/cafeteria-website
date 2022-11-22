@@ -3,13 +3,10 @@ import { Parallax } from "react-parallax";
 import { Link } from "react-router-dom";
 import { Carousel, Container, Row, Col, Image, Button } from "react-bootstrap";
 import "./Contact.css"
-import sn1 from "./../localAssets/sn1.png"
-import sn2 from "./../localAssets/sn2.png"
-import leon1 from "./../localAssets/leon1.png"
-import leon2 from "./../localAssets/leon2.png"
-import leon3 from "./../localAssets/leon3.jpg"
-import leon4 from "./../localAssets/leon4.png"
-import shaun1 from "./../localAssets/shaun1.jpg"
+import c1 from "./../localAssets/coffee1.jpg"
+import c2 from "./../localAssets/coffee2.jpg"
+import c3 from "./../localAssets/coffee3.jpg"
+import c4 from "./../localAssets/coffee4.jpg"
 import waLogo from "./../localAssets/whatsapp-logo-transparent.png"
 import emailLogo from "./../localAssets/email-logo-transparent.png"
 import fbLogo from "./../localAssets/fb-logo-transparent.png"
@@ -20,19 +17,20 @@ function Contact() {
 
     return (
         <div>
-            <Container className="body-splitter-sm" />
+            
+            <Container className="body-splitter-xs" />
 
-            <Container className="contact-banner">
-                <Image>
-
-                </Image>
+            <Container fluid="true" className="shop-banner">
+                <h1>Nuestras redes sociales</h1>
             </Container>
+
+            <Container className="body-splitter-xs" />
 
             <Container fluid="true" className="page-holder-full">
                 <Row fluid="true" className="contact-row">
                     <Col fluid="true" className="contact-column" xl>
                         <Container fluid="true" className="contact-SN">
-                            <Image className="contact-img-l" src={leon3} />
+                            <Image className="contact-img-l" src={c3} />
                             <Row  fluid="true"  className="contact-overlay-l">
                                 <Image className="contact-SM-logo" src={instaLogo} />
                                 <Container  fluid="true"  className="contact-SM-logo-text">
@@ -44,7 +42,7 @@ function Contact() {
 
                     <Col fluid="true" className="contact-column" xl>
                         <Container fluid="true" className="contact-SN">
-                            <Image className="contact-img-r" src={shaun1} />
+                            <Image className="contact-img-r" src={c4} />
                             <Row  fluid="true"  className="contact-overlay-r">
                                 <Image className="contact-SM-logo" src={fbLogo} />
                                 <Container  fluid="true"  className="contact-SM-logo-text">

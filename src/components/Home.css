@@ -484,25 +484,25 @@ p {
 
 }
 
-.carousel-control-prev{
+.carousel-control-prev {
     height: inherit;
     width: 6vw;
     background-color: #4b4b4b5a;
 }
 
-.carousel-control-next{
+.carousel-control-next {
     height: inherit;
     width: 6vw;
     background-color: #4b4b4b5a;
 }
 
-.carousel-control-prev:hover{
+.carousel-control-prev:hover {
     height: inherit;
     width: 10vw;
     background-color: #4b4b4b5a;
 }
 
-.carousel-control-next:hover{
+.carousel-control-next:hover {
     height: inherit;
     width: 10vw;
     background-color: #4b4b4b5a;
@@ -516,4 +516,321 @@ p {
 .carousel-control-next-icon {
     height: 8rem !important;
     width: 8rem !important;
+}
+
+.caption {
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    justify-content: center;
+    justify-self: center;
+    padding: 1.5em;
+    padding-left: 3em;
+    padding-right: 3em;
+    border-radius: 1em;
+    width: fit-content;
+    height: fit-content;
+    background-color: #27170877;
+    backdrop-filter: blur(2px);
+}
+
+tr {
+    height: auto;
+    border-style: groove;
+    border-width: 1px;
+    font-size: 1em;
+}
+
+.shopDB-textHolder {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: .2em;
+    margin-bottom: .21em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.shopDB-input {
+    display: flex;
+    width: 30vw;
+    height: 3vh;
+}
+
+.shopDB-input-m {
+    display: flex;
+    width: 30vw;
+    height: 5vh;
+}
+
+.shopDB-input-l {
+    display: flex;
+    width: 30vw;
+    height: 7vh;
+}
+
+.shopDB-title {
+    display: flex;
+    font-size: 1em;
+}
+
+.shopDB-page-holder {
+    margin: auto;
+    padding: 0;
+    margin: 0;
+
+}
+
+.shopDB-page-module {
+    background-color: rgba(22, 22, 22, 0.943);
+    padding-top: 5em;
+    padding-bottom: 5em;
+    padding-left: 0;
+    padding-right: 0;
+    overflow: visible;
+    position: relative;
+    box-shadow: 0em 0em 4em -1em rgb(0, 0, 0);
+}
+
+.shopDB-input-holder {
+    display: flex;
+    flex-direction: column;
+}
+
+.shopDB-subTextHolder {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.shopDB-subInputHolder {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1em;
+    height: 2em;
+
+}
+
+.shopDB-button {
+    display: flex;
+    flex-direction: row;
+    vertical-align: middle;
+    text-align: center;
+    align-items: center;
+    text-transform: capitalize;
+    justify-content: center;
+    margin-top: 3em;
+    width: 10em;
+    height: 3em;
+    background-color: rgb(35, 155, 125) !important;
+    color: black;
+    border-radius: .5em;
+}
+
+.shopDB-holderFull {
+    background-color: rgb(22, 22, 22);
+    padding-top: 5em;
+    padding-bottom: 5em;
+    overflow: visible;
+    position: relative;
+    box-shadow: 0em 0em 4em -1em rgb(0, 0, 0);
+}
+
+.shopDB-button:hover {
+    transform: scale(1.2);
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in;
+    transition-delay: 0.5s;
+    background-color: rgb(22, 199, 199);
+    box-shadow: 0em 0em .2em .2em rgb(0, 0, 0);
+    border-radius: 10px;
+}
+
+.shopDB-button:active {
+    transform: scale(1.5);
+    background-color: rgb(30, 170, 72) !important;
+    box-shadow: 0em 0em .2em .2em rgb(0, 0, 0);
+    border-radius: 10px;
+}
+
+.shopDB-button-d {
+    background-color: rgba(92, 92, 92, 0.622);
+    justify-content: center;
+    margin-top: 3em;
+    width: 10em;
+    height: 3em;
+}
+
+.shopDB-button-d:hover {
+    background-color: rgba(92, 92, 92, 0.622);
+}
+
+.shopDB-col {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
+.shopDB-clickSpan {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(18, 18, 18, 0.381);
+}
+
+.shopDB-cartHolder {
+    position: fixed;
+    height: 10vh;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    top: 13vh;
+    right: 1vw;
+    z-index: 1000;
+
+}
+
+.shopDB-modal-span {
+
+    width: inherit;
+    height: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+.shopDB-cartImage {
+    width: inherit;
+    height: inherit;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .shopDB-cartImage {
+        animation: App-logo-spin infinite 3s normal;
+    }
+}
+
+@keyframes App-logo-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    10% {
+        transform: rotate(-15deg);
+    }
+
+    30% {
+        transform: rotate(0deg);
+    }
+
+    30% {
+        transform: rotate(15deg);
+    }
+
+    40% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.shopDB-modal {
+
+    animation-duration: 1s;
+    animation-name: modalBounce;
+
+}
+
+@keyframes modalBounce {
+    0% {
+        padding-top: 0vh;
+        padding-bottom: 0vh;
+        padding-left: 0vw;
+        padding-right: 0vw;
+        left: 70vw;
+        height: 10vh;
+        width: 10vh;
+        transform: scale(0.1);
+        opacity: 0;
+    }
+
+    30% {
+        padding-top: 10vh;
+        padding-bottom: 10vh;
+        padding-left: 3vw;
+        padding-right: 3vw;
+        transform: scale(1.5);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.shopDB-table {
+    width: 100%;
+    padding: 1em;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #3d2914;
+    overflow: auto;
+    border-radius: .5em;
+}
+
+.shopDB-table2 {
+    width: 100%;
+    padding-top: 2em;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.shopDB-tableH {
+    height: 1em;
+}
+
+.shopDB-selectPreview {
+    display: flex;
+    height: 4vh;
+    top: 1em;
+}
+
+.shopDB-selectPreview:hover {
+    transform: scale(5);
+    position: sticky;
+    left: 10vw;
+}
+
+.shopDB-dd {
+    position: relative;
+    border-radius: .5em;
+    overflow: visible;
+}
+
+.shopDB-selectPreview2 {
+    padding-top: 2em;
+    display: flex;
+    margin: auto;
+    height: 20vh;
+    justify-self: flex-start;
+    justify-content: center;
+}
+
+.shopDB-selectPreview2:hover {
+    transform: scale(1.2);
+}
+
+.objCards-dropdown {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
 }

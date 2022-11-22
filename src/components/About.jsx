@@ -1,23 +1,31 @@
-import React, { Component } from "react";
-import { Container, Col, Image } from "react-bootstrap";
-import "./About.css";
+import React, { useState, useEffect } from "react";
+import { Container } from "react-bootstrap";
+import "./About.css"
+import NewsGallery from "./../components/controllers/NewsGallery.jsx"
 
-export default class About extends Component {
-  render() {
-    return (
-      <div>
-        <Image src="assets/nc2.png" className="header-image" />
-        <Container>
-          <Col xs={12} sm={8} smOffset={2}></Col>
-          <Image src="assets/nc.jpg" className="about-profile-pic" />
-          <h3>This is it!</h3>
-          <p> prueba! </p>
-          <p> asdasdasd </p>
-          <p> asdasdasd </p>
-          <p> asdasdasd </p>
-          <p> asdasdasd </p>
-        </Container>
-      </div>
-    );
-  }
+function About() {
+
+
+  return (
+    <div>
+
+      <Container className="body-splitter-xs" />
+
+      <Container fluid="true" className="shop-banner">
+        <h1>¿Quienes somos?</h1>
+      </Container>
+
+      <Container className="body-splitter-xs" />
+
+      <Container fluid="true" className="page-holder-full">
+
+        <NewsGallery/>
+
+      </Container>
+
+
+    </div>
+  );
 }
+
+export default About;

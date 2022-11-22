@@ -1,0 +1,12 @@
+.shop-banner{
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    justify-self: center;
+    height: 30vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.267);
+    backdrop-filter: blur(2px);
+}
