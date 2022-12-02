@@ -134,7 +134,7 @@ function CustomNavbar(params) {
 
               <LinkContainer to="/shop">
                 <Nav.Link className="text-holder-style">
-                  <p className="text-style">Menu</p>
+                  <p className="text-style">Productos</p>
                 </Nav.Link>
               </LinkContainer>
 
@@ -181,7 +181,7 @@ function CustomNavbar(params) {
 
               <LinkContainer to="/shop">
                 <Nav.Link className="text-holder-style">
-                  <p className="text-style">Menu</p>
+                  <p className="text-style">Productos</p>
                 </Nav.Link>
               </LinkContainer>
 

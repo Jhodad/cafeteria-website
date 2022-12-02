@@ -10,7 +10,6 @@ import Contact from "./components/Contact";
 import Shop from "./components/Shop";
 import About from "./components/About"
 import Navbar from "./components/objects/CustomNavbar.jsx";
-import { useEffect } from "react";
 
 
 function App() {
@@ -21,19 +20,17 @@ function App() {
   return (
     <Container fluid="true" className="frame" >
       <Router>
+        // Aqui la Navbar nunca se refresca
         <Navbar isUser={setLoggedUser} isLogged={setisLogged} />
-
         <Container fluid="true" className="frame">
           <Routes>
-            <Route exact path="/" element={<Home verified={isLogged} />} />
-            {/* <Route exact path="/" element={<Home verified={isLogged} creds={loggedUser} />} /> */}
+            // Adentro de ROUTES, son las cosas que se refrescan
+            <Route exact path="/" element={<Home verified={isLogged} />} />            
             <Route exact path="/contact" element={<Contact />} />
             <Route exact path="/shop" element={<Shop />} />
             <Route exact path="/about" element={<About />} />
           </Routes>
-
         </Container>
-
       </Router>
     </Container>
   );

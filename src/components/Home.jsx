@@ -5,10 +5,10 @@ import { collection, getDocs, addDoc, updateDoc, deleteDoc, doc, query, where } 
 import "./Home.css";
 import welcomeVid from "../localAssets/coffeeVid.mp4";
 
+// Funcion "constructor" con export default
+export default function Home(params) {
 
-function Home(params) {
-
-  //Input fields
+  //Variables, P = Placeholder
   const [newName, setNewName] = useState('');
   const [newNamePH, setNewNamePH] = useState('');
 
@@ -21,28 +21,41 @@ function Home(params) {
   const [newURL, setNewURL] = useState('');
   const [newURLPH, setNewURLPH] = useState('');
 
+  // El objeto seleccionado del DropDown
   const [selectedObject, setSelectedObject] = useState({});
 
-  // == Data
+  // ===============
+  // DATA
+  // ===============
+
+  // Objeto que guarda los datos obtenidos de la DB firestore
   const [dataDB, setDataDB] = useState(null);
+  // Select de una tabla "collection"
   const [collectionRef, setCollectionRef] = useState(collection(db, 'productos'));
-  const [dataDBq, setDataDBq] = useState('');
+  // Esta login?
   const [isVerified, setIsVerified] = useState(false)
 
-  // === Create ===
+
+  // ===============
+  // CRUD
+  // ===============
+
+  // === CREATE ===
   const createProduct = async () => {
+    // Add a Doc 
+    // addDoc(tabla, objeto)
     await addDoc(collectionRef, {
       nombre: newName,
       desc: newDesc,
       precio: Number(newPrice),
       imagen: newURL
     });
-    //alertDismiss("PRODUCT CREATED!")
     alert("PRODUCT CREATED!")
   };
 
-  // == Read
+  // === READ ===
   const getDataDB = async () => {
+    // getDocs = get filas o items (tabla)
     const collectionSnap = await getDocs(collectionRef);
     setDataDB(collectionSnap.docs.map(
       (doc) => (
@@ -54,45 +67,12 @@ function Home(params) {
           imagen: doc.data().imagen
         })
     ));
-    // alert("GALLERY UPDATED!")
+    alert("GALLERY UPDATED!")
   };
 
-  // === Select ===
-  const selectItem = async (aName) => {
-    if (aName === undefined) {
-      //console.log("si ta undefinde")
-    } else {
-      const q = query(collectionRef, where("nombre", "==", aName))
-      const qrySnap = await getDocs(q)
-      console.log("====");
-      console.log(qrySnap)
-      console.log("====");
-      qrySnap.forEach((doc) => {
-        updateBoxes(doc);
-      });
-      console.log(selectedObject)
-
-    }
-
-  }
-
-  const updateBoxes = async (doc) => {
-    if (doc !== undefined) {
-      setSelectedObject(doc.id)
-      setNewNamePH(doc.get("nombre"));
-      setNewPricePH(doc.get("precio"));
-      setNewDescPH(doc.get("desc"))
-      setNewURLPH(doc.get("imagen"))
-      console.log(newNamePH)
-    }
-
-  }
-
-  // === Update ===
+  // === UPDATE ===
   const updateProduct = async () => {
-    // console.log("el id a actualizar supuestamente es: ")
-    // console.log(selectedObject)
-
+    // Un producto 
     const prod = doc(db, 'productos', selectedObject)
     const newFields = {
       nombre: newName,
@@ -104,27 +84,57 @@ function Home(params) {
     alert("PRODUCT UPDATED!")
   };
 
-  // === Delete ===
-  const deleteProduct = async () => {
-    const prod = doc(db, "productos", selectedObject)
-    await deleteDoc(prod)
+  // === SELECT ===
+  const selectItem = async (aName) => {
+    if (aName === undefined) {
+      // si esta vacia, no busca nada
+    } else {
+      // si si tiene valor, hace el query
+      //query(baseDatos, instruccion)
+      const q = query(collectionRef, where("nombre", "==", aName))
+      //nuevo snapshot de lo que obtuvo del query
+      const qrySnap = await getDocs(q)
+      qrySnap.forEach((doc) => {
+        updateBoxes(doc);
+      });
+      console.log(selectedObject)
+    }
+  }
 
+  const updateBoxes = async (doc) => {
+    if (doc !== undefined) {
+      setSelectedObject(doc.id)
+      setNewNamePH(doc.get("nombre"));
+      setNewPricePH(doc.get("precio"));
+      setNewDescPH(doc.get("desc"))
+      setNewURLPH(doc.get("imagen"))
+    }
+  }
+
+  // === DELETE ===
+  const deleteProduct = async () => {
+    const prod = doc(db, 'productos', selectedObject)
+    await deleteDoc(prod)
     alert("PRODUCT DELETED!")
   };
 
-   useEffect(() => {
+  // al inicio de la pagina
+  useEffect(() => {
     {
       getDataDB();
     }
   }, []);
 
+
+  // ===============
+  // CRUD
+  // ===============
   return (
     <div>
 
       {/* ======================== */}
       {/*   WELCOME HEADER + VID   */}
       {/* ======================== */}
-
       <Container fluid="true" className="page-header">
         <Container className="home-page-header" fluid="true" onContextMenu={e => e.preventDefault()}>
           <video className='home-page-header-vid' fluid="true" autoPlay loop muted>
@@ -134,17 +144,16 @@ function Home(params) {
             <h1>CONOCE NUESTROS PRODUCTOS</h1>
           </Container>
         </Container>
-
       </Container>
 
+      <Container className="body-splitter-xs" />
 
-      <Container className="body-splitter-xs">  </Container>
 
       {/* ======================== */}
       {/*     ADMIN SECTION        */}
       {/* ======================== */}
-      
-      {
+      { // JS para manejar los parametros
+        // If params.verified 
         params.verified &&
         <Container fluid="true" className="shopDB-page-module shopDB-input-holder">
 
@@ -178,7 +187,7 @@ function Home(params) {
             />
           </Container>
 
-          {/* DESC SHORT */}
+          {/* DESC */}
           <Container className="shopDB-textHolder">
             <h1 className="shopDB-title">Description: </h1>
             <input
@@ -213,11 +222,10 @@ function Home(params) {
           </Container>
 
           <Container className="shopDB-textHolder">
-            <Button className="shopDB-button" onClick={() => createProduct()}> Create </Button>
-            <Button className="shopDB-button" onClick={() => getDataDB()}> Read </Button>
-            <Button className="shopDB-button" onClick={() => updateProduct()}> Update </Button>
-            <Button className="shopDB-button" onClick={() => deleteProduct()}> Delete </Button>
-
+            <Button className="shopDB-button" onClick={() => createProduct()}> CREATE </Button>
+            <Button className="shopDB-button" onClick={() => getDataDB()}> READ </Button>
+            <Button className="shopDB-button" onClick={() => updateProduct()}> UPDATE </Button>
+            <Button className="shopDB-button" onClick={() => deleteProduct()}> DELETE </Button>
           </Container>
 
           <Container className="shopDB-table">
@@ -230,6 +238,7 @@ function Home(params) {
             >
 
               {
+                // If dataDB no esta vacia
                 dataDB !== null &&
                 dataDB.map((products) => (
                   <Dropdown.Item className="objCards-dropdown" fluid="true" onClick={() => selectItem(products.nombre)}>
@@ -248,10 +257,7 @@ function Home(params) {
       {/* ======================== */}
       {/*     FEATURED PRODUCTS    */}
       {/* ======================== */}
-
       <Carousel className="carousel" interval={2000} indicators={false} >
-
-
         {
           dataDB !== null && dataDB.slice(0, 3).map((products, index) => (
             <Carousel.Item index>
@@ -266,10 +272,9 @@ function Home(params) {
 
       </Carousel>
 
-      <Container className="body-splitter-xs">  </Container>
+      <Container className="body-splitter-xs"/>
 
     </div>
   );
 }
 
-export default Home;
