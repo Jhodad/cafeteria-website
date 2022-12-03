@@ -81,7 +81,6 @@ function CustomNavbar(params) {
   }
 
   const returnToParent = () => {
-    params.isUser(user);
     params.isLogged(verified);
   }
 
@@ -89,7 +88,6 @@ function CustomNavbar(params) {
     {
       getDataDB();
       returnToParent()
-      console.log('isLoading is: ', verified);
     }
   }, []);
 
@@ -249,7 +247,6 @@ function CustomNavbar(params) {
 
               </Modal>
             </Container>
-
           }
 
         </Navbar.Collapse>

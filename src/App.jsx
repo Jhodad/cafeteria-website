@@ -20,11 +20,11 @@ function App() {
   return (
     <Container fluid="true" className="frame" >
       <Router>
-        // Aqui la Navbar nunca se refresca
+        {/* // Aqui la Navbar nunca se refresca */}
         <Navbar isUser={setLoggedUser} isLogged={setisLogged} />
         <Container fluid="true" className="frame">
           <Routes>
-            // Adentro de ROUTES, son las cosas que se refrescan
+            {/* // Adentro de ROUTES, son las cosas que se refrescan */}
             <Route exact path="/" element={<Home verified={isLogged} />} />            
             <Route exact path="/contact" element={<Contact />} />
             <Route exact path="/shop" element={<Shop />} />
